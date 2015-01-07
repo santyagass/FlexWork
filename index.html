@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>FlexWork</title>
+
+    <link rel="stylesheet" href="css/code-hl.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/flexwork.css"/>
+
+</head>
+<body>
+
+    <div class="style-guide-content_wrap">
+        <div class="style-guide-header">
+            <div class="style-guide-title">
+                <span>FlexWork</span>
+                <img src="img/lodosslogo.png" height="64" alt=""/>
+            </div>
+        </div>
+
+        <div class="style-guide-tabs-wrapper">
+            <div class="style-guide-tabs">
+                <ul id="section-menu">
+                    <li><a href="#section1">Base</a></li>
+                    <li><a href="#section2">Order</a></li>
+                    <li><a href="#section3">Direction</a></li>
+                    <li><a href="#section4">Horizontal alignment</a></li>
+                    <li><a href="#section5">Vertical alignment</a></li>
+                    <!--<li><a href="#section6">Buttons</a></li>
+                    <li><a href="#section7">Images</a></li>
+                    <li><a href="#section8">Helpers</a></li>
+                    <li><a href="#section9">Alerts</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="style-guide-main">
+            <div class="style-guide-container">
+                <div class="style-guide-note style-guide-note-warning">
+                    <h3>Кроссбраузерность</h3>
+                    <p>Поддерживаются все современые браузеры. под современными понимаются на данный момент: Firefox 30+, Chrome 30+, Safari 6.1+, iOS Safari 7.1+, Opera 20+, Android Browser 4.4+, Internet Explorer 11+
+                        <br/><br/>
+                        Про IE10 отдельно. Так как я не сумел раздобыть настоящего 10йго "Ослика" (да и лень пока)), соответственно не смог и протестировать, но поддержку таки добавил на всякий случай ;)
+                    </p>
+                </div>
+
+                <div class="style-guide-section">
+                    <div class="style-guide-section-heading" id="section1">Base</div>
+                    <div class="style-guide-inner">
+                        <div class="style-guide-sub-section-heading">Basic examples</div>
+                        <p>Ничего сверхъестественного не используется, все это чаще всего проще делать ручками) Данный "инструмент" сделан в основном для ленивых или для тех, кто не хочет или не любит заниматься стилями, и это не входит в его обязанности.</p>
+                        <p>Не стесняйтесть, сожмите окошко по ширине и посмотрите на результаты.</p>
+                        <p>По-умолчанию выравнивание по левому верхнему краю</p>
+                        <div class="style-guide-example">
+                            <div class="flex-box colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+
+                        <br/>
+                        <div class="style-guide-sub-section-heading">Flexbox Wrapping</div>
+                        <p>По-умолчанию строка не переносится (<strong>flex-wrap--nowrap</strong>)</p>
+                        <div class="style-guide-example">
+                            <div class="flex-box colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                            </div>
+
+                            <div class="flex-box flex-wrap--wrap colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex-box flex-wrap--wrap"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-guide-section">
+                    <div class="style-guide-section-heading" id="section2">Order</div>
+                    <div class="style-guide-inner">
+                        <p>Используем следующим образом: <strong>flex-order--n&lt;integer&gt;</strong>, пока диапазон <strong>-1</strong> &minus; <strong>5</strong></p>
+                        <div class="style-guide-example">
+                            <div class="flex-box colored">
+                                <div>1</div>
+                                <div class="flex-order--n-1">2</div>
+                                <div class="flex-order--n3">3</div>
+                                <div>4</div>
+                                <div class="flex-order--n2">5</div>
+                                <div class="flex-order--n1">6</div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div class="flex-order--n-1"&gt;2&lt;/div&gt;
+    &lt;div class="flex-order--n3"&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div class="flex-order--n2"&gt;5&lt;/div&gt;
+    &lt;div class="flex-order--n1"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-guide-section">
+                    <div class="style-guide-section-heading" id="section3">Direction</div>
+                    <div class="style-guide-inner">
+                        <p><strong>flex-direction--&lt;направление&gt;</strong>, направления бывают:</p>
+                        <ul>
+                            <li><strong>row</strong> (по-умолчанию)</li>
+                            <li><strong>row-reverse</strong></li>
+                            <li><strong>column</strong></li>
+                            <li><strong>column-reverse</strong></li>
+                        </ul>
+                        <div class="style-guide-example">
+                            <div>
+                                <div class="flex-box flex-direction--row-reverse colored">
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                </div>
+
+                                <div class="flex-box flex-direction--column colored">
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                </div>
+
+                                <div class="flex-box flex-direction--column-reverse colored">
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                </div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box flex-direction--row-reverse"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex-box flex-direction--column"&gt;
+    &lt;div>1&lt;/div&gt;
+    &lt;div>2&lt;/div&gt;
+    &lt;div>3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex-box flex-direction--column-reverse"&gt;
+    &lt;div>1&lt;/div&gt;
+    &lt;div>2&lt;/div&gt;
+    &lt;div>3&lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-guide-section">
+                    <div class="style-guide-section-heading" id="section4">Horizontal alignment</div>
+                    <div class="style-guide-inner">
+                        <p>По-умолчанию <strong>flex-justify--start</strong></p>
+                        <div class="style-guide-example">
+                            <div class="flex-box flex-justify--end colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="flex-box flex-justify--center colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="flex-box flex-justify--between colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                            </div>
+
+                            <div class="flex-box flex-justify--around colored">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box flex-justify--end"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex-box flex-justify--center"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex-box flex-justify--between"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex-box flex-justify--around"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-guide-section">
+                    <div class="style-guide-section-heading" id="section5">Vertical alignment</div>
+                    <div class="style-guide-inner">
+                        <div class="style-guide-sub-section-heading">Выравнивание строк</div>
+                        <ul>
+                            <li><strong>flex-v-align--start</strong></li>
+                            <li><strong>flex-v-align--end</strong></li>
+                            <li><strong>flex-v-align--center</strong></li>
+                            <li><strong>flex-v-align--between</strong></li>
+                            <li><strong>flex-v-align--around</strong></li>
+                            <li><strong>flex-v-align--stretch</strong> (по-умолчанию)</li>
+                        </ul>
+                        <div class="style-guide-example">
+                            <div class="flex-box">
+                                <div class="flex-box flex-wrap--wrap flex-v-align--start colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-box flex-wrap--wrap flex-v-align--end colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-box flex-wrap--wrap flex-v-align--center colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-box flex-wrap--wrap flex-v-align--between colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-box flex-wrap--wrap flex-v-align--around colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-box flex-wrap--wrap flex-v-align--stretch colored small-box">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--start"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--end"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--center"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--between"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--around"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-wrap--wrap flex-v-align--stretch"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+
+                        <br/>
+                        <div class="style-guide-sub-section-heading">Выравнивание содержимого строк</div>
+
+
+                        <br/>
+                        <div class="style-guide-sub-section-heading">Положение отдельных блоков в строке</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="style-guide-sticky_footer">
+        lodossteam
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        // Code Highlight
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        });
+
+
+
+    </script>
+
+</body>
+</html>

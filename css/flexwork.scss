@@ -1,0 +1,142 @@
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-webkit-flex:  $values;
+	-ms-flex:  $values;
+	flex:  $values;
+}
+
+@mixin order($val) {
+	-webkit-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
+
+// =============== Examples ============
+/*.wrapper {
+	@include flexbox();
+}
+
+.item {
+	@include flex(1 200px);
+	@include order(2);
+}*/
+
+.flex-box {
+	@include flexbox();
+}
+
+.flex-order-- {
+	&n-1 { @include order(-1); }
+	&n0 { @include order(0); }
+	&n1 { @include order(1); }
+	&n2 { @include order(2); }
+	&n3 { @include order(3); }
+	&n4 { @include order(4); }
+	&n5 { @include order(5); }
+}
+
+.flex-direction {
+	&--row {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	&--row-reverse {
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	}
+
+	&--column {
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	&--column-reverse {
+		-webkit-flex-direction: column-reverse;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+.flex-justify {
+	&--start {
+		-webkit-justify-content: flex-start;
+		-ms-flex-align: start;
+		justify-content: flex-start;
+	}
+
+	&--end {
+		-webkit-justify-content: flex-end;
+		-ms-flex-align: end;
+		justify-content: flex-end;
+	}
+
+	&--center {
+		-webkit-justify-content: center;
+		-ms-flex-align: center;
+		justify-content: center;
+	}
+
+	&--between {
+		-webkit-justify-content: space-between;
+		-ms-flex-align: justify;
+		justify-content: space-between;
+	}
+
+	&--around {
+		-webkit-justify-content: space-around;
+		-ms-flex-align: distribute;
+		justify-content: space-around;
+	}
+}
+
+.flex-wrap {
+	&--nowrap {
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+
+	&--wrap {
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+
+.flex-v-align {
+	&--start {
+		align-content: flex-start;
+	}
+
+	&--end {
+		align-content: flex-end;
+	}
+
+	&--center {
+		align-content: center;
+	}
+
+	&--between {
+		align-content: space-between;
+	}
+
+	&--around {
+		align-content: space-around;
+	}
+
+	&--stretch {
+		align-content: stretch;
+	}
+}
