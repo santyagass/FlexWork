@@ -43,9 +43,9 @@
 
                 <div class="style-guide-note style-guide-note-warning">
                     <h3>Cross-browser compatibility</h3>
-                    <p>Supports all modern browsers. understood by modern at the moment: Firefox 30+, Chrome 30+, Safari 6.1+, iOS Safari 7.1+, Opera 20+, Android Browser 4.4+, Internet Explorer 11+
+                    <p>Supports all modern browsers. Current versions: Firefox 30+, Chrome 30+, Safari 6.1+, iOS Safari 7.1+, Opera 20+, Android Browser 4.4+, Internet Explorer 11+
                         <br/><br/>
-                        About IE10 separately. Styles flexes standard 2012. I added just in case, but not yet tested ;)
+                        About IE10: I added style flexes standard 2012, but not yet tested ;)
                     </p>
                 </div>
 
@@ -55,7 +55,6 @@
                         <div class="style-guide-sub-section-heading">Basic examples</div>
                         <p>Ничего сверхъестественного не используется, все это чаще всего проще делать ручками) Данный "инструмент" сделан в основном для ленивых или для тех, кто не хочет или не любит заниматься стилями, и это не входит в его обязанности.</p>
                         <p>Не стесняйтесть, сожмите окошко по ширине и посмотрите на результаты.</p>
-                        <p>По-умолчанию выравнивание по левому верхнему краю</p>
                         <div class="style-guide-example">
                             <div class="flex-box colored">
                                 <div>1</div>
@@ -82,7 +81,7 @@
 
                         <br/>
                         <div class="style-guide-sub-section-heading">Flexbox Wrapping</div>
-                        <p>По-умолчанию строка не переносится (<strong>flex-wrap--nowrap</strong>)</p>
+                        <p>By default, flex items will all try to fit onto one line. (<strong>flex-wrap--nowrap</strong>)</p>
                         <div class="style-guide-example">
                             <div class="flex-box colored">
                                 <div>1</div>
@@ -140,7 +139,7 @@
                 <div class="style-guide-section">
                     <div class="style-guide-section-heading" id="section2">Order</div>
                     <div class="style-guide-inner">
-                        <p>Используем следующим образом: <strong>flex-order--n&lt;integer&gt;</strong>, пока диапазон <strong>-1</strong> &minus; <strong>5</strong></p>
+                        <p><strong>flex-order--n&lt;integer&gt;</strong> property controls the order in which they appear in the flex container. Range: <strong>-1</strong> &minus; <strong>5</strong></p>
                         <div class="style-guide-example">
                             <div class="flex-box colored">
                                 <div>1</div>
@@ -170,9 +169,9 @@
                 <div class="style-guide-section">
                     <div class="style-guide-section-heading" id="section3">Direction</div>
                     <div class="style-guide-inner">
-                        <p><strong>flex-direction--&lt;направление&gt;</strong>, направления бывают:</p>
+                        <p><strong>flex-direction--&lt;direction&gt;</strong>, available values:</p>
                         <ul>
-                            <li><strong>row</strong> (по-умолчанию)</li>
+                            <li><strong>row</strong> (default)</li>
                             <li><strong>row-reverse</strong></li>
                             <li><strong>column</strong></li>
                             <li><strong>column-reverse</strong></li>
@@ -225,7 +224,7 @@
                 <div class="style-guide-section">
                     <div class="style-guide-section-heading" id="section4">Horizontal alignment</div>
                     <div class="style-guide-inner">
-                        <p>По-умолчанию <strong>flex-h-align--start</strong></p>
+                        <p>By default <strong>flex-h-align--start</strong></p>
                         <div class="style-guide-example">
                             <div class="flex-box flex-h-align--end colored">
                                 <div>1</div>
@@ -292,7 +291,7 @@
                             <li><strong>flex-v-align--center</strong></li>
                             <li><strong>flex-v-align--between</strong></li>
                             <li><strong>flex-v-align--around</strong></li>
-                            <li><strong>flex-v-align--stretch</strong> (по-умолчанию)</li>
+                            <li><strong>flex-v-align--stretch</strong> (default)</li>
                         </ul>
                         <div class="style-guide-example">
                             <div class="flex-box">
@@ -401,7 +400,7 @@
                             <li><strong>flex-v-align-items--end</strong></li>
                             <li><strong>flex-v-align-items--center</strong></li>
                             <li><strong>flex-v-align-items--baseline</strong></li>
-                            <li><strong>flex-v-align-items--stretch</strong> (по-умолчанию)</li>
+                            <li><strong>flex-v-align-items--stretch</strong> (default)</li>
                         </ul>
                         <div class="style-guide-example">
                             <div class="flex-box rand-height">
@@ -480,7 +479,7 @@
 
                         <br/>
                         <div class="style-guide-sub-section-heading">Положение отдельных блоков в строке</div>
-                        <p>Индивидуально переписывает общее для содержимого строки выравнивание</p>
+                        <p>This allows the default alignment (or the one specified by <strong>flex-v-align-items--...</strong>) to be overridden for individual flex items. Available values:</p>
                         <ul>
                             <li><strong>flex-align--auto</strong></li>
                             <li><strong>flex-align--start</strong></li>
