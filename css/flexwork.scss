@@ -1,9 +1,5 @@
-@mixin flexbox() {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
+/* FlexWork v0.0.1
+	Author: Santyago - santyago@xakep.ru (Lodoss Team http://www.lodossteam.com) */
 
 @mixin flex($values) {
 	-webkit-box-flex: $values;
@@ -19,18 +15,50 @@
 	order: $val;
 }
 
-// =============== Examples ============
-/*.wrapper {
-	@include flexbox();
-}
-
-.item {
-	@include flex(1 200px);
-	@include order(2);
-}*/
 
 .flex-box {
-	@include flexbox();
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	& > .flex-align {
+		&--start {
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+		}
+
+		&--start {
+			-webkit-align-self: flex-start;
+			-ms-flex-item-align: start;
+			align-self: flex-start;
+		}
+
+		&--end {
+			-webkit-align-self: flex-end;
+			-ms-flex-item-align: end;
+			align-self: flex-end;
+		}
+
+		&--center {
+			-webkit-align-self: center;
+			-ms-flex-item-align: center;
+			align-self: center;
+		}
+
+		&--baseline {
+			-webkit-align-self: baseline;
+			-ms-flex-item-align: baseline;
+			align-self: baseline;
+		}
+
+		&--stretch {
+			-webkit-align-self: stretch;
+			-ms-flex-item-align: stretch;
+			align-self: stretch;
+		}
+	}
 }
 
 .flex-order-- {
@@ -69,7 +97,7 @@
 	}
 }
 
-.flex-justify {
+.flex-h-align {
 	&--start {
 		-webkit-justify-content: flex-start;
 		-ms-flex-align: start;
@@ -117,26 +145,64 @@
 
 .flex-v-align {
 	&--start {
+		-ms-flex-line-pack: start;
 		align-content: flex-start;
 	}
 
 	&--end {
+		-ms-flex-line-pack: end;
 		align-content: flex-end;
 	}
 
 	&--center {
+		-ms-flex-line-pack: center;
 		align-content: center;
 	}
 
 	&--between {
+		-ms-flex-line-pack: justify;
 		align-content: space-between;
 	}
 
 	&--around {
+		-ms-flex-line-pack: distribute;
 		align-content: space-around;
 	}
 
 	&--stretch {
+		-ms-flex-line-pack: stretch;
 		align-content: stretch;
+	}
+}
+
+.flex-v-align-items {
+	&--start {
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+
+	&--end {
+		-webkit-align-items: flex-end;
+		-ms-flex-align: end;
+		align-items: flex-end;
+	}
+
+	&--center {
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	&--baseline {
+		-webkit-align-items: baseline;
+		-ms-flex-align: baseline;
+		align-items: baseline;
+	}
+
+	&--stretch {
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
 	}
 }

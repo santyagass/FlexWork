@@ -1,16 +1,34 @@
-/*.wrapper {
-	@include flexbox();
-}
-
-.item {
-	@include flex(1 200px);
-	@include order(2);
-}*/
+/* FlexWork v0.0.1
+	Author: Santyago - santyago@xakep.ru (Lodoss Team http://www.lodossteam.com) */
 .flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+  .flex-box > .flex-align--start {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto; }
+  .flex-box > .flex-align--start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start; }
+  .flex-box > .flex-align--end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end; }
+  .flex-box > .flex-align--center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .flex-box > .flex-align--baseline {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline; }
+  .flex-box > .flex-align--stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch; }
 
 .flex-order--n-1 {
   -webkit-box-ordinal-group: -1;
@@ -65,23 +83,23 @@
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse; }
 
-.flex-justify--start {
+.flex-h-align--start {
   -webkit-justify-content: flex-start;
   -ms-flex-align: start;
   justify-content: flex-start; }
-.flex-justify--end {
+.flex-h-align--end {
   -webkit-justify-content: flex-end;
   -ms-flex-align: end;
   justify-content: flex-end; }
-.flex-justify--center {
+.flex-h-align--center {
   -webkit-justify-content: center;
   -ms-flex-align: center;
   justify-content: center; }
-.flex-justify--between {
+.flex-h-align--between {
   -webkit-justify-content: space-between;
   -ms-flex-align: justify;
   justify-content: space-between; }
-.flex-justify--around {
+.flex-h-align--around {
   -webkit-justify-content: space-around;
   -ms-flex-align: distribute;
   justify-content: space-around; }
@@ -96,16 +114,43 @@
   flex-wrap: wrap; }
 
 .flex-v-align--start {
+  -ms-flex-line-pack: start;
   align-content: flex-start; }
 .flex-v-align--end {
+  -ms-flex-line-pack: end;
   align-content: flex-end; }
 .flex-v-align--center {
+  -ms-flex-line-pack: center;
   align-content: center; }
 .flex-v-align--between {
+  -ms-flex-line-pack: justify;
   align-content: space-between; }
 .flex-v-align--around {
+  -ms-flex-line-pack: distribute;
   align-content: space-around; }
 .flex-v-align--stretch {
+  -ms-flex-line-pack: stretch;
   align-content: stretch; }
+
+.flex-v-align-items--start {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+.flex-v-align-items--end {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+.flex-v-align-items--center {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+.flex-v-align-items--baseline {
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+.flex-v-align-items--stretch {
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
 
 /*# sourceMappingURL=flexwork.css.map */

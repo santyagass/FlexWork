@@ -375,7 +375,7 @@ html {
 }
 
 .flex-box.small-box {
-	height: 200px;
+	height: 180px;
 
 	& > * {
 		width: 20px !important;
@@ -393,5 +393,11 @@ html {
 	.flex-box {
 		margin-top: 0;
 		margin-left: 10px;
+	}
+
+	&.rand-height {
+		& > div > * {
+			line-height: 2;
+		}
 	}
 }

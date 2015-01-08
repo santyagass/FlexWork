@@ -240,7 +240,7 @@ html, body, .style-guide-content_wrap {
       width: 130px; }
 
 .flex-box.small-box {
-  height: 200px; }
+  height: 180px; }
   .flex-box.small-box > * {
     width: 20px !important;
     height: auto;
@@ -251,5 +251,7 @@ html, body, .style-guide-content_wrap {
 .flex-box .flex-box {
   margin-top: 0;
   margin-left: 10px; }
+.flex-box.rand-height > div > * {
+  line-height: 2; }
 
 /*# sourceMappingURL=main.css.map */

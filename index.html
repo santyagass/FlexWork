@@ -37,11 +37,15 @@
 
         <div class="style-guide-main">
             <div class="style-guide-container">
+                <div class="style-guide-note style-guide-note-danger">
+                    <p>Comments and suggestions send to email: <strong>santyago@xakep.ru</strong></p>
+                </div>
+
                 <div class="style-guide-note style-guide-note-warning">
-                    <h3>Кроссбраузерность</h3>
-                    <p>Поддерживаются все современые браузеры. под современными понимаются на данный момент: Firefox 30+, Chrome 30+, Safari 6.1+, iOS Safari 7.1+, Opera 20+, Android Browser 4.4+, Internet Explorer 11+
+                    <h3>Cross-browser compatibility</h3>
+                    <p>Supports all modern browsers. understood by modern at the moment: Firefox 30+, Chrome 30+, Safari 6.1+, iOS Safari 7.1+, Opera 20+, Android Browser 4.4+, Internet Explorer 11+
                         <br/><br/>
-                        Про IE10 отдельно. Так как я не сумел раздобыть настоящего 10йго "Ослика" (да и лень пока)), соответственно не смог и протестировать, но поддержку таки добавил на всякий случай ;)
+                        About IE10 separately. Styles flexes standard 2012. I added just in case, but not yet tested ;)
                     </p>
                 </div>
 
@@ -221,27 +225,27 @@
                 <div class="style-guide-section">
                     <div class="style-guide-section-heading" id="section4">Horizontal alignment</div>
                     <div class="style-guide-inner">
-                        <p>По-умолчанию <strong>flex-justify--start</strong></p>
+                        <p>По-умолчанию <strong>flex-h-align--start</strong></p>
                         <div class="style-guide-example">
-                            <div class="flex-box flex-justify--end colored">
+                            <div class="flex-box flex-h-align--end colored">
                                 <div>1</div>
                                 <div>2</div>
                                 <div>3</div>
                             </div>
 
-                            <div class="flex-box flex-justify--center colored">
+                            <div class="flex-box flex-h-align--center colored">
                                 <div>1</div>
                                 <div>2</div>
                                 <div>3</div>
                             </div>
 
-                            <div class="flex-box flex-justify--between colored">
+                            <div class="flex-box flex-h-align--between colored">
                                 <div>1</div>
                                 <div>2</div>
                                 <div>3</div>
                             </div>
 
-                            <div class="flex-box flex-justify--around colored">
+                            <div class="flex-box flex-h-align--around colored">
                                 <div>1</div>
                                 <div>2</div>
                                 <div>3</div>
@@ -249,25 +253,25 @@
 
                             <pre>
                                 <code class="html">
-&lt;div class="flex-box flex-justify--end"&gt;
+&lt;div class="flex-box flex-h-align--end"&gt;
     &lt;div&gt;1&lt;/div&gt;
     &lt;div&gt;2&lt;/div&gt;
     &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="flex-box flex-justify--center"&gt;
+&lt;div class="flex-box flex-h-align--center"&gt;
     &lt;div&gt;1&lt;/div&gt;
     &lt;div&gt;2&lt;/div&gt;
     &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="flex-box flex-justify--between"&gt;
+&lt;div class="flex-box flex-h-align--between"&gt;
     &lt;div&gt;1&lt;/div&gt;
     &lt;div&gt;2&lt;/div&gt;
     &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="flex-box flex-justify--around"&gt;
+&lt;div class="flex-box flex-h-align--around"&gt;
     &lt;div&gt;1&lt;/div&gt;
     &lt;div&gt;2&lt;/div&gt;
     &lt;div&gt;3&lt;/div&gt;
@@ -392,10 +396,179 @@
 
                         <br/>
                         <div class="style-guide-sub-section-heading">Выравнивание содержимого строк</div>
+                        <ul>
+                            <li><strong>flex-v-align-items--start</strong></li>
+                            <li><strong>flex-v-align-items--end</strong></li>
+                            <li><strong>flex-v-align-items--center</strong></li>
+                            <li><strong>flex-v-align-items--baseline</strong></li>
+                            <li><strong>flex-v-align-items--stretch</strong> (по-умолчанию)</li>
+                        </ul>
+                        <div class="style-guide-example">
+                            <div class="flex-box rand-height">
+                                <div class="flex-box flex-v-align-items--start colored small-box">
+                                    <div><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
 
+                                <div class="flex-box flex-v-align-items--end colored small-box">
+                                    <div><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--center colored small-box">
+                                    <div><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--baseline colored small-box">
+                                    <div><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--stretch colored small-box">
+                                    <div><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div class="flex-box flex-v-align-items--start"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--end"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--center"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--baseline"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--stretch"&gt;
+        &lt;div&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
 
                         <br/>
                         <div class="style-guide-sub-section-heading">Положение отдельных блоков в строке</div>
+                        <p>Индивидуально переписывает общее для содержимого строки выравнивание</p>
+                        <ul>
+                            <li><strong>flex-align--auto</strong></li>
+                            <li><strong>flex-align--start</strong></li>
+                            <li><strong>flex-align--end</strong></li>
+                            <li><strong>flex-align--center</strong></li>
+                            <li><strong>flex-align--baseline</strong></li>
+                            <li><strong>flex-align--stretch</strong></li>
+                        </ul>
+                        <div class="style-guide-example">
+                            <div class="flex-box rand-height">
+                                <div class="flex-box flex-v-align-items--start colored small-box">
+                                    <div class="flex-align--end"><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--end colored small-box">
+                                    <div class="flex-align--center"><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--center colored small-box">
+                                    <div class="flex-align--baseline"><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--baseline colored small-box">
+                                    <div class="flex-align--stretch"><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+
+                                <div class="flex-box flex-v-align-items--stretch colored small-box">
+                                    <div class="flex-align--start"><br/><br/></div>
+                                    <div><br/></div>
+                                    <div><br/><br/></div>
+                                    <div><br/><br/><br/></div>
+                                </div>
+                            </div>
+
+                            <pre>
+                                <code class="html">
+&lt;div class="flex-box"&gt;
+    &lt;div class="flex-box flex-v-align-items--start"&gt;
+        &lt;div class="flex-align--end"&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--end"&gt;
+        &lt;div class="flex-align--center"&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--center"&gt;
+        &lt;div class="flex-align--baseline"&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--baseline"&gt;
+        &lt;div class="flex-align--stretch"&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-box flex-v-align-items--stretch"&gt;
+        &lt;div class="flex-align--start"&gt;&lt;/div&gt;
+        ...
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="style-guide-note style-guide-note-danger">
+                            <h3>Attention!</h3>
+                            <p>Note that <strong>float</strong>, <strong>clear</strong> and
+                                <strong>vertical-align</strong> have no effect on a flex item.</p>
+                        </div>
                     </div>
                 </div>
             </div>
