@@ -350,15 +350,16 @@ html {
 
 .flex-box.colored {
 	padding: 5px 5px;
-	background-color: #88499C;
+	background-color: #CDCDCD;
 
 	& > * {
 		margin: 5px 5px;
 		height: 50px;
 		width: 50px;
-		background-color: #E77F24;
+		background-color: #737373;
 		text-align: center;
 		line-height: 50px;
+		color: #e3e3e3;
 
 		&:nth-child(2) {
 			width: 180px;

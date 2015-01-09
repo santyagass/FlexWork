@@ -224,14 +224,15 @@ html, body, .style-guide-content_wrap {
 
 .flex-box.colored {
   padding: 5px 5px;
-  background-color: #88499C; }
+  background-color: #CDCDCD; }
   .flex-box.colored > * {
     margin: 5px 5px;
     height: 50px;
     width: 50px;
-    background-color: #E77F24;
+    background-color: #737373;
     text-align: center;
-    line-height: 50px; }
+    line-height: 50px;
+    color: #e3e3e3; }
     .flex-box.colored > *:nth-child(2) {
       width: 180px; }
     .flex-box.colored > *:nth-child(3) {
