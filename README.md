@@ -1,3 +1,3 @@
 # FlexWork
 
-http://santyagass.github.io/FlexWork
+Documentation & examples: http://santyagass.github.io/FlexWork
