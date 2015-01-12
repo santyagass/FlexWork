@@ -1,0 +1,19 @@
+{
+  "name": "flex-work",
+  "version": "0.0.1",
+  "homepage": "https://github.com/santyagass/FlexWork",
+  "description": "FlexWork is simple tool aims to simplify flexbox technics for people who want end-result and do not want to dig into details of CSS.",
+  "main": "dist/flexwork.min.css",
+  "keywords": [
+    "flex-box",
+    "flex",
+    "css",
+    "css",
+    "flex",
+    "flex-block"
+  ],
+  "authors": [
+    "Santyago"
+  ],
+  "license": "MIT"
+}
