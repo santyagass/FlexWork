@@ -69,10 +69,6 @@ html, body, .style-guide-content_wrap {
   @media (min-width: 980px) {
     .style-guide-title {
       max-width: 940px; } }
-  .style-guide-title span {
-    margin-right: auto; }
-  .style-guide-title img {
-    display: block; }
 .style-guide-tabs-wrapper {
   height: 48px; }
 .style-guide-tabs {
