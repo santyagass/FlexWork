@@ -5,7 +5,7 @@ Documentation & examples: http://santyagass.github.io/FlexWork
 ##Instalation
 
 ```bash
-bower install --save ng-flex
+bower install --save flex-work
 ```
 
 ## Usage
