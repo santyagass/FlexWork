@@ -5,7 +5,7 @@ Documentation & examples: http://santyagass.github.io/FlexWork
 ##Instalation
 
 ```bash
-bower install --save flex-work
+bower install flex-work --save
 ```
 
 ## Usage
