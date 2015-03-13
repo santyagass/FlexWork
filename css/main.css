@@ -218,6 +218,20 @@ html, body, .style-guide-content_wrap {
     .style-guide-colors .color:nth-child(6) .preview {
       background-color: lightslategrey; }
 
+.ie-support {
+  display: inline-block;
+  height: 37px;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #cbcbcb;
+  line-height: 36px;
+  vertical-align: middle; }
+  .ie-support img {
+    display: inline-block;
+    margin-right: 8px;
+    line-height: 36px; }
+
 .flex-box.colored {
   padding: 5px 5px;
   background-color: #CDCDCD; }

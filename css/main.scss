@@ -340,6 +340,24 @@ html {
 	}
 }
 
+.ie-support {
+	display: inline-block;
+
+	img {
+		display: inline-block;
+		margin-right: 8px;
+		line-height: 36px;
+	}
+
+	height: 37px;
+	padding: 0 10px;
+	font-size: 15px;
+	color: #ffffff;
+	background-color: #cbcbcb;
+	line-height: 36px;
+	vertical-align: middle;
+}
+
 .flex-box.colored {
 	padding: 5px 5px;
 	background-color: #CDCDCD;
